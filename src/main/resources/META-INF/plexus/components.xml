@@ -14,11 +14,11 @@
 					<id>default</id>
 						<phases>
 							<validate>
-								com.mercatis.maven.plugins:maven-eclipse-plugin:materializeTargetPlatform
+								com.mercatis.maven.plugins:build-eclipse-plugin:materializeTargetPlatform
 							</validate>
 							<process-resources>
-								com.mercatis.maven.plugins:maven-eclipse-plugin:gatherDependencies,
-								com.mercatis.maven.plugins:maven-eclipse-plugin:analyseBuildProperties,
+								com.mercatis.maven.plugins:build-eclipse-plugin:gatherDependencies,
+								com.mercatis.maven.plugins:build-eclipse-plugin:analyseBuildProperties,
 								org.apache.maven.plugins:maven-resources-plugin:resources
 							</process-resources>
 							<compile>
@@ -43,7 +43,7 @@
 							</package>
 							<install>
 								org.apache.maven.plugins:maven-install-plugin:install,
-								com.mercatis.maven.plugins:maven-eclipse-plugin:installToTargetPlatformLocation
+								com.mercatis.maven.plugins:build-eclipse-plugin:installToTargetPlatformLocation
 							</install>
 							<deploy>
 								org.apache.maven.plugins:maven-deploy-plugin:deploy
@@ -55,7 +55,7 @@
 						<phases>
 							<clean>
 								org.apache.maven.plugins:maven-clean-plugin:clean,
-								com.mercatis.maven.plugins:maven-eclipse-plugin:cleanTargetPlatform
+								com.mercatis.maven.plugins:build-eclipse-plugin:cleanTargetPlatform
 							</clean>
 						</phases>
 					</lifecycle>
